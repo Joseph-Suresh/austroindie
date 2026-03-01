@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AustroIndie — Where Habsburg Grace Meets Mughal Splendour</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .hero-bg {
+      background: radial-gradient(ellipse at 30% 20%,rgba(201,162,78,.12) 0%,transparent 55%),
+                  radial-gradient(ellipse at 75% 80%,rgba(122,31,46,.08) 0%,transparent 50%),
+                  linear-gradient(160deg,#fdf6e8 0%,#f5ead0 35%,#f0e2c8 65%,#e8d5b5 100%);
+    }
+    @keyframes floatGently { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-12px) rotate(3deg)} }
+    .float-ornament { animation: floatGently 6s ease-in-out infinite; }
+    .arch-clip { clip-path: polygon(0 0,100% 0,100% 88%,50% 100%,0 88%); }
+    .cat-card { height: 400px; }
+    @media(max-width:768px){ .cat-card{ height:280px; } }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+    @media(max-width:768px){ .hero-grid{ grid-template-columns:1fr; } }
+    .hero-images { position:relative; height:520px; }
+    @media(max-width:768px){ .hero-images{ height:380px; } }
+    .categories-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    @media(max-width:768px){ .categories-grid{ grid-template-columns:1fr; } }
+    .featured-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+    @media(max-width:1024px){ .featured-grid{ grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+
+<div id="navPlaceholder"></div>
+<div id="mobilePlaceholder"></div>
+
+<!-- ── HERO ── -->
+<section class="hero-bg jali-bg" style="min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:96px">
+  <div class="collar" style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:340px;height:4px;background:linear-gradient(90deg,transparent,#c9a24e,#e8c97a,#c9a24e,transparent)"></div>
+  <div style="position:absolute;top:64px;left:16px;color:#c9a24e;opacity:.18;font-size:3rem;font-family:serif;user-select:none">❧</div>
+  <div style="position:absolute;top:64px;right:16px;color:#c9a24e;opacity:.18;font-size:3rem;font-family:serif;transform:scaleX(-1);user-select:none">❧</div>
+
+  <div class="section-wrap" style="width:100%;padding-top:48px;padding-bottom:64px">
+    <div class="hero-grid">
+      <div class="reveal visible">
+        <div class="royal-badge" style="margin-bottom:16px">Est. Vienna × Jaipur · 2025</div>
+        <div class="crown-divider" style="margin-bottom:16px;text-align:left">♛ &nbsp; ♛</div>
+        <h1 style="font-family:'Cinzel',serif;font-size:clamp(2rem,4.5vw,3.5rem);color:#7a1f2e;line-height:1.15;letter-spacing:.05em;margin-bottom:20px">
+          Where Habsburg<br/>
+          <em style="font-family:'Playfair Display',serif;font-style:italic;color:#c9a24e">Grace</em>
+          &nbsp;Meets<br/>
+          Mughal Splendour
+        </h1>
+        <p class="cormorant" style="font-size:1.1rem;line-height:1.9;color:#8c7b6b;max-width:420px;margin-bottom:32px">
+          Two imperial traditions, one exquisite collection — handpicked sarees, jewellery &amp; décor born from the palaces of Vienna and Jaipur.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <a href="pages/collections.html" class="btn-gold">Explore Collections</a>
+          <a href="pages/heritage.html" class="btn-ghost">Our Heritage</a>
+        </div>
+      </div>
+      <div class="hero-images reveal visible" style="transition-delay:.2s">
+        <div class="arch-clip" style="position:absolute;top:0;right:0;width:260px;height:360px;overflow:hidden;box-shadow:0 20px 60px rgba(90,20,15,.2)">
+          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=600&q=80" alt="Saree" style="width:100%;height:100%;object-fit:cover"/>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;width:200px;height:260px;overflow:hidden;box-shadow:0 16px 40px rgba(90,20,15,.18);border:4px solid #faf5ec">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&q=80" alt="Jewellery" style="width:100%;height:100%;object-fit:cover"/>
+        </div>
+        <div class="float-ornament" style="position:absolute;top:50%;left:0;transform:translateY(-50%);background:rgba(250,245,236,.95);border:1px solid rgba(201,162,78,.4);padding:20px 24px;box-shadow:0 12px 40px rgba(90,20,15,.1)">
+          <p style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:#8c7b6b">Royal Craft</p>
+          <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;color:#7a1f2e">Free Shipping</p>
+          <p style="font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:#8c7b6b">Above ₹999</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>♛ Handpicked Sarees</span><span>❧ Imitation Jewellery</span><span>♛ Decorative Items</span>
+    <span>❧ WhatsApp Orders</span><span>♛ Cash On Delivery</span><span>❧ Easy Returns</span>
+    <span>♛ Vienna × Jaipur Craft</span><span>❧ Imperial Quality</span>
+    <span>♛ Handpicked Sarees</span><span>❧ Imitation Jewellery</span><span>♛ Decorative Items</span>
+    <span>❧ WhatsApp Orders</span><span>♛ Cash On Delivery</span><span>❧ Easy Returns</span>
+    <span>♛ Vienna × Jaipur Craft</span><span>❧ Imperial Quality</span>
+  </div>
+</div>
+
+<!-- ── CATEGORIES ── -->
+<section style="padding:80px 0">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="royal-badge" style="margin-bottom:16px">Curated For Royalty</div>
+      <h2>Our Collections</h2>
+      <div class="filigree" style="margin-top:20px;max-width:280px;margin-left:auto;margin-right:auto">
+        <div class="filigree-line"></div><span class="filigree-center">♛</span><div class="filigree-line"></div>
+      </div>
+    </div>
+    <div class="categories-grid">
+      <a href="pages/categories.html?cat=sarees" class="cat-card reveal" style="transition-delay:.1s">
+        <img src="https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=700&q=80" alt="Sarees"/>
+        <div class="cat-card-overlay">
+          <div class="royal-badge" style="margin-bottom:8px;border-color:rgba(201,162,78,.5);color:rgba(201,162,78,.8)">Explore</div>
+          <h3 style="font-size:1.8rem;color:#faf5ec;letter-spacing:.08em">Sarees</h3>
+          <p class="cormorant" style="color:rgba(250,245,236,.6);font-style:italic;font-size:.95rem;margin-top:4px">Woven in silk &amp; stories</p>
+        </div>
+      </a>
+      <a href="pages/categories.html?cat=jewellery" class="cat-card reveal" style="transition-delay:.2s">
+        <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=700&q=80" alt="Jewellery"/>
+        <div class="cat-card-overlay">
+          <div class="royal-badge" style="margin-bottom:8px;border-color:rgba(201,162,78,.5);color:rgba(201,162,78,.8)">Explore</div>
+          <h3 style="font-size:1.8rem;color:#faf5ec;letter-spacing:.08em">Jewellery</h3>
+          <p class="cormorant" style="color:rgba(250,245,236,.6);font-style:italic;font-size:.95rem;margin-top:4px">Adorned in imperial gold</p>
+        </div>
+      </a>
+      <a href="pages/categories.html?cat=decor" class="cat-card reveal" style="transition-delay:.3s">
+        <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=700&q=80" alt="Décor"/>
+        <div class="cat-card-overlay">
+          <div class="royal-badge" style="margin-bottom:8px;border-color:rgba(201,162,78,.5);color:rgba(201,162,78,.8)">Explore</div>
+          <h3 style="font-size:1.8rem;color:#faf5ec;letter-spacing:.08em">Décor</h3>
+          <p class="cormorant" style="color:rgba(250,245,236,.6);font-style:italic;font-size:.95rem;margin-top:4px">Palace heirlooms, reimagined</p>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="pages/collections.html" class="btn-ghost">View All Collections</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PRODUCTS (4 cards) ── -->
+<section class="section-parchment arch-pattern" style="padding:80px 0">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="royal-badge" style="margin-bottom:16px">Hand-Curated For You</div>
+      <h2>Featured Products</h2>
+      <div class="filigree" style="margin-top:20px;max-width:280px;margin-left:auto;margin-right:auto">
+        <div class="filigree-line"></div><span class="filigree-center">❧</span><div class="filigree-line"></div>
+      </div>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="pages/collections.html" class="btn-gold">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTAGRAM CTA ── -->
+<section style="padding:64px 0">
+  <div class="section-wrap">
+    <div class="reveal" style="border:1px solid rgba(201,162,78,.2);padding:64px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#f9f0e0,#f2e8d5,#ede0c8)">
+      <div style="position:absolute;top:0;left:0;width:96px;height:96px" class="jali-bg"></div>
+      <div style="position:absolute;bottom:0;right:0;width:96px;height:96px" class="jali-bg;transform:scale(-1)"></div>
+      <div style="position:absolute;inset:16px;border:1px solid rgba(201,162,78,.15);pointer-events:none"></div>
+      <div style="position:relative;z-index:2">
+        <div class="crown-divider" style="margin-bottom:16px">♛ &nbsp; ♛</div>
+        <div class="royal-badge" style="margin-bottom:16px">Join The Court</div>
+        <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.5rem,3vw,2.5rem);color:#7a1f2e;margin:12px 0">Follow Our Royal Journey</h2>
+        <p class="cormorant" style="font-style:italic;font-size:1.1rem;color:#8c7b6b;max-width:420px;margin:0 auto 32px">Step inside our palace of curations — new arrivals, behind-the-scenes artistry & styling inspiration awaits.</p>
+        <a href="https://instagram.com/austroindie" target="_blank" style="display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#f09433,#e6683c,#bc1888);color:white;padding:14px 36px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;transition:opacity .2s">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.31.975.976 1.248 2.243 1.31 3.61.058 1.265.069 1.645.069 4.849s-.011 3.584-.069 4.849c-.062 1.366-.335 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.335-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.849c.062-1.366.335-2.633 1.31-3.608.975-.975 2.242-1.248 3.608-1.31C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.131 4.602.425 3.635 1.392 2.668 2.36 2.374 3.532 2.315 4.81 2.257 6.09 2.243 6.498 2.243 12c0 5.502.014 5.91.072 7.19.059 1.278.353 2.45 1.32 3.418.967.967 2.14 1.261 3.418 1.32C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.059 2.45-.353 3.418-1.32.967-.968 1.261-2.14 1.32-3.418.058-1.28.072-1.688.072-7.19 0-5.502-.014-5.91-.072-7.19-.059-1.278-.353-2.45-1.32-3.418C19.397.425 18.225.131 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          @austroindie
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footerPlaceholder"></div>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('navPlaceholder').outerHTML = injectNav('Home');
+  document.getElementById('footerPlaceholder').outerHTML = injectFooter();
+
+  // Render 4 featured products
+  const products = getProducts();
+  const featured = [products[0], products[4], products[8], products[3]];
+  document.getElementById('featuredGrid').innerHTML = featured.map((p,i) => renderProductCard(p, i*0.07)).join('');
+
+  // Re-run observer for dynamically added cards
+  document.querySelectorAll('.reveal:not(.visible)').forEach(r => {
+    new IntersectionObserver(([e]) => { if(e.isIntersecting) e.target.classList.add('visible'); },{threshold:.08}).observe(r);
+  });
+</script>
+</body>
+</html>
